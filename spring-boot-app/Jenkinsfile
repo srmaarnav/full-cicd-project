@@ -21,7 +21,7 @@ pipeline {
     }
     stage('Static Code Analysis') {
       environment {
-        SONAR_URL = "https://sona.arnavsharma.com.np"
+        SONAR_URL = "https://sonarqube.arnavsharma.com.np"
       }
       steps {
         withCredentials([string(credentialsId: 'sonar-auth', variable: 'SONAR_AUTH_TOKEN')]) {
